@@ -1,4 +1,4 @@
-include_recipe "resque::service"
+include_recipe "opsworks-resque::service"
 
 # setup resque service per app
 node[:deploy].each do |application, deploy|
