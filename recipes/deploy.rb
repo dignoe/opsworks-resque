@@ -11,6 +11,7 @@ node[:deploy].each do |application, deploy|
     cwd deploy[:current_path]
     command node[:resque][application][:restart_command]
     action :run
+    retries 2
     
     only_if do 
       File.exists?(deploy[:current_path])
