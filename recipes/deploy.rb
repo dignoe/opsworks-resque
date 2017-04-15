@@ -1,4 +1,4 @@
-include_recipe "opsworks-resque::configure"
+include_recipe "opsworks-resque::setup"
 
 node[:deploy].each do |application, deploy|
 
